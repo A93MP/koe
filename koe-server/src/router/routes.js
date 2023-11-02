@@ -1,5 +1,5 @@
 import { Router } from 'express'
-import { Login } from '../controller/pages.js'
+import { getUsers } from '../controller/user.js'
 export const router = Router()
 
 // HANDLING CORS
@@ -28,4 +28,4 @@ router.use(corsMiddleWare)
 
 // ROUTES
 
-router.get('/', Login)
+router.get('/', getUsers)
