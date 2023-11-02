@@ -4,8 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login</title>
+  <script type="importmap">
+    {"imports":{
+      "login":"http://localhost:5173/main.js"
+    }}
+  </script>
 </head>
 <body>
   <h1>login</h1>
 </body>
+<script type="module">
+  import {main} from "login"
+   window.addEventListener('DOMContentLoaded', () => {
+    console.log('cargado el dom')
+    main()
+  })
+</script>
 </html>
