@@ -1,6 +1,7 @@
 import express from 'express'
 import path, { dirname } from 'path'
 import { fileURLToPath } from 'url'
+import { initMongo } from './src/model/repository/nosql-connection.js'
 import { router } from './src/router/routes.js'
 const PORT = process.env.PORT || 3000
 const HOSTNAME = '127.0.0.1'
@@ -17,5 +18,6 @@ app.use(function (req, res) {
 })
 
 app.listen(PORT, () => {
+  initMongo()
   console.log(`Server is running on http://${HOSTNAME}:${PORT}`)
 })

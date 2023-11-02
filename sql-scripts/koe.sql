@@ -1,6 +1,6 @@
 drop database if exists Koe;
 create database Koe;
-
+use Koe;
 create table UserInfo(
 	idx integer primary key unique auto_increment,
     email varchar(30) unique,
