@@ -11,11 +11,9 @@ const __dirName = dirname(__fileName)
 
 app.disable('x-powered-by')
 app.use(express.json())
+app.use(express.urlencoded())
 app.use(router)
 app.use(express.static(path.join(__dirName, 'public')))
-app.use(function (req, res) {
-  res.send({ msg: 'hello' })
-})
 
 app.listen(PORT, () => {
   initMongo()

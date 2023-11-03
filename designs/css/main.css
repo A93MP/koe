@@ -1,0 +1,46 @@
+:root{
+  --backGround-dark:#222436;
+  --main-color:#bb2658;
+  --text:#bbbbbb;
+  --font-size:x-large;
+  --font-weight:600;
+  --backGround-bright:#dde1e7;
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+  font-family: Comfortaa;
+}
+*,*::after,*::before{
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: Comfortaa;
+  src: url(../Comfortaa/Comfortaa-VariableFont_wght.ttf);
+}
+body{
+  background-color: var(--backGround-dark);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  color: var(--text);
+  overflow: hidden;
+}
+.button{
+  width: fit-content;
+  height: 1.5rem;
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+}
+
+footer{
+  position: absolute;
+  width: 50vw;
+  height: 2rem;
+  display: flex;
+  font-size: medium;
+  justify-content: space-between;
+  align-items: center;
+  bottom: 0;
+}
